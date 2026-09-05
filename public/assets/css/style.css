@@ -1,0 +1,1002 @@
+/* Google Fonts loaded via HTML link tags */
+
+:root {
+  --bg-color: #1a1b1f;
+  --bg-card: #22242a;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --accent: #E5B83B;
+  --accent-hover: #ffcf40;
+  --accent-glow: rgba(229, 184, 59, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(229, 184, 59, 0.12);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* 3. Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* 4. Body */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* 5. Body before */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at top center, rgba(229,184,59,0.06) 0%, transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* 6. Global link styles */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: var(--accent-hover);
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* 7. Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* 8. Typography */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+h2 {
+  font-size: 2.2rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1.15rem;
+}
+p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+/* 9. Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* 10. Section Title */
+.section-title {
+  font-size: 2.2rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+}
+
+/* 11. Lead Text */
+.lead-text {
+  font-size: 1.2rem;
+  color: #e2e8f0;
+}
+
+/* 12. Highlight Text */
+.highlight-text {
+  color: var(--accent);
+}
+
+/* 13. Text Link */
+.text-link {
+  border-bottom: 1px dashed var(--accent);
+  color: var(--text-primary);
+}
+.text-link:hover {
+  border-bottom-style: solid;
+  color: var(--accent);
+}
+
+/* 14. Text Center */
+.text-center {
+  text-align: center;
+}
+
+/* BUTTONS */
+/* 15. .btn */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+/* 16. .btn-primary */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent) 0%, #c29b12 100%);
+  color: #111;
+  box-shadow: 0 4px 15px var(--accent-glow);
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(229,184,59,0.3);
+  color: #111;
+  text-shadow: none;
+}
+
+/* 17. .btn-outline */
+.btn-outline {
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+.btn-outline:hover {
+  background: var(--accent);
+  color: #111;
+  text-shadow: none;
+}
+
+/* 18. .btn-auth */
+.btn-auth {
+  padding: 0.55rem 1.3rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* 19. .btn-auth-primary */
+.btn-auth-primary {
+  background: linear-gradient(135deg, var(--accent) 0%, #c29b12 100%);
+  color: #111;
+}
+.btn-auth-primary:hover {
+  transform: translateY(-2px);
+  color: #111;
+  text-shadow: none;
+}
+
+/* 20. .btn-auth-outline */
+.btn-auth-outline {
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+.btn-auth-outline:hover {
+  background: var(--accent);
+  color: #111;
+  text-shadow: none;
+}
+
+/* 21. .hero-btn */
+.hero-btn {
+  min-width: 190px;
+}
+
+/* 22. .auth-buttons */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* 23. .desktop-auth */
+.desktop-auth {
+  display: flex;
+}
+
+/* 24. .mobile-auth */
+.mobile-auth {
+  display: none;
+}
+
+/* 25. .w-full */
+.w-full {
+  width: 100%;
+}
+
+/* GLASSMORPHISM */
+/* 26. .glass-panel */
+.glass-panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+/* 27. .hover-lift:hover */
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  border-color: rgba(229,184,59,0.3);
+}
+
+/* 28. .feature-card:hover */
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(229,184,59,0.4);
+}
+
+/* HEADER */
+/* 29. .global-header */
+.global-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(26,27,31,0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.global-header.scrolled {
+  background: rgba(26,27,31,0.95);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  border-bottom-color: rgba(229,184,59,0.2);
+}
+
+/* 30. .header-inner */
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+/* 31. .logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+}
+.logo:hover {
+  color: white;
+  text-shadow: none;
+}
+
+/* 32. .logo img */
+.logo img {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* 33. .logo span */
+.logo span {
+  letter-spacing: 0.5px;
+}
+
+/* 34. .main-nav */
+.main-nav {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+/* 35. .main-nav > a */
+.main-nav > a {
+  color: #e2e8f0;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+/* 36. .main-nav > a::after */
+.main-nav > a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+/* 37. .main-nav > a:hover */
+.main-nav > a:hover {
+  color: var(--accent);
+  text-shadow: none;
+}
+.main-nav > a:hover::after {
+  width: 100%;
+}
+
+/* 38. .mobile-menu-btn */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 39. .mobile-menu-btn span */
+.mobile-menu-btn span {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  background: var(--accent);
+  margin: 5px 0;
+  transition: all 0.3s;
+  border-radius: 2px;
+}
+
+/* BREADCRUMBS */
+/* 40. .breadcrumbs */
+.breadcrumbs {
+  padding: 1.2rem 1.5rem 0;
+}
+
+/* 41. .breadcrumbs ol */
+.breadcrumbs ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* 42. .breadcrumbs li */
+.breadcrumbs li {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* 43. .breadcrumbs li separator */
+.breadcrumbs li:not(:last-child)::after {
+  content: '/';
+  margin-left: 0.4rem;
+  color: #64748b;
+}
+
+/* LAYOUT */
+/* 44. .content-section */
+.content-section {
+  padding: 4.5rem 1.5rem;
+  scroll-margin-top: 90px;
+}
+
+/* 45. .grid */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/* 46. .grid-2 */
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 47. .grid-3 */
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* 48. .flex-col */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 49. .mt-auto */
+.mt-auto {
+  margin-top: auto;
+}
+
+/* 50. .split-content */
+.split-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+/* HERO */
+/* 51. .hero */
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 52. .hero::before */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(229,184,59,0.06) 0%, transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* 53. .hero::after */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vw;
+  max-width: 800px;
+  max-height: 800px;
+  border: 1px solid rgba(229,184,59,0.04);
+  border-radius: 50%;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* 54. .hero-logo */
+.hero-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 22px;
+  margin: 0 auto 2rem;
+  box-shadow: 0 0 20px rgba(229,184,59,0.2);
+  animation: logoPulse 3s infinite ease-in-out;
+  display: block;
+  object-fit: cover;
+}
+
+/* 55. .hero-content */
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* 56. .hero h1 */
+.hero h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2.8rem;
+}
+
+/* 57. .hero-subtitle */
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: #94a3b8;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* 58. .hero-buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+/* 59. @keyframes logoPulse */
+@keyframes logoPulse {
+  0% { box-shadow: 0 0 20px rgba(229,184,59,0.2); }
+  50% { box-shadow: 0 0 35px rgba(229,184,59,0.35); }
+  100% { box-shadow: 0 0 20px rgba(229,184,59,0.2); }
+}
+
+/* TRUST BAR */
+/* 60. .trust-bar */
+.trust-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* 61. .trust-card */
+.trust-card {
+  text-align: center;
+  padding: 2rem 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+/* 62. .trust-card:hover */
+.trust-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+/* 63. .trust-card h3 */
+.trust-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  border: none;
+  padding: 0;
+}
+
+/* 64. .trust-card p */
+.trust-card p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* TEXT CONTENT */
+/* 65. .text-content ul, ol */
+.text-content ul, .text-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+/* 66. .text-content li */
+.text-content li {
+  margin-bottom: 0.6rem;
+}
+
+/* 67. .read-more */
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-top: auto;
+  padding-top: 1rem;
+}
+.read-more:hover {
+  color: var(--accent-hover);
+}
+
+/* FEATURE CARDS */
+/* 68. .feature-card */
+.feature-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 69. .feature-icon */
+.feature-icon {
+  font-size: 2.2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-glow);
+  border-radius: 14px;
+  border: 1px solid rgba(229,184,59,0.2);
+  margin-bottom: 1.2rem;
+  color: var(--accent);
+}
+
+/* INFO TABLE */
+/* 70. .info-table */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* 71. .info-table th */
+.info-table th {
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* 72. .info-table td */
+.info-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+}
+
+/* 73. .info-table tr:hover */
+.info-table tr:hover td {
+  background: rgba(229,184,59,0.03);
+}
+
+/* TOC */
+/* 74. .toc */
+.toc {
+  max-width: 850px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(229,184,59,0.25);
+}
+
+/* 75. .toc-title */
+.toc-title {
+  margin-top: 0;
+  font-size: 1.4rem;
+  border: none;
+  padding: 0;
+  margin-bottom: 1.2rem;
+}
+
+/* 76. .toc-list */
+.toc-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* 77. .toc-list a */
+.toc-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+/* 78. .toc-list a:hover */
+.toc-list a:hover {
+  background: var(--accent-glow);
+  border-color: rgba(229,184,59,0.4);
+  transform: translateX(4px);
+  text-shadow: none;
+}
+
+/* 79. .toc-num */
+.toc-num {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* FAQ */
+/* 80. .faq-accordion details */
+.faq-accordion details {
+  border-bottom: 1px solid var(--glass-border);
+  padding: 1.2rem 0;
+}
+
+/* 81. .faq-accordion summary */
+.faq-accordion summary {
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  list-style: none;
+  position: relative;
+  padding-right: 2.5rem;
+  transition: color 0.3s;
+}
+.faq-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 82. .faq-accordion summary:hover */
+.faq-accordion summary:hover {
+  color: var(--accent);
+}
+
+/* 83. .faq-accordion summary::after */
+.faq-accordion summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+/* 84. .faq-accordion details[open] summary::after */
+.faq-accordion details[open] summary::after {
+  content: '\2212';
+  transform: translateY(-50%);
+}
+
+/* 85. .faq-accordion details[open] */
+.faq-accordion details[open] {
+  background: rgba(229,184,59,0.02);
+  border-radius: 12px;
+  padding: 1.2rem;
+  border-bottom: 1px solid transparent;
+}
+.faq-accordion details[open] summary {
+  margin-bottom: 0;
+}
+
+/* 86. .faq-accordion p */
+.faq-accordion p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+/* CONTACT FORM */
+/* 87. .contact-form .form-group */
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* 88. .contact-form label */
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-weight: 500;
+}
+
+/* 89. .contact-form input, select, textarea */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid var(--glass-border);
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* 90. focus */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(229,184,59,0.15);
+}
+
+/* FOOTER */
+/* 91. .global-footer */
+.global-footer {
+  border-top: 1px solid var(--glass-border);
+  padding: 4rem 0 1.5rem;
+  margin-top: 4rem;
+  background: rgba(10,10,14,0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* 92. .footer-grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+/* 93. .footer-logo */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.2rem;
+  text-decoration: none;
+  color: white;
+}
+.footer-logo:hover {
+  text-shadow: none;
+  color: white;
+}
+
+/* 94. .footer-logo img */
+.footer-logo img {
+  width: 26px;
+  height: 26px;
+  border-radius: 5px;
+}
+
+/* 95. .footer-logo h4 */
+.footer-logo h4 {
+  margin: 0;
+  font-size: 1.3rem;
+  border: none;
+  padding: 0;
+  font-weight: 800;
+}
+
+/* 96. .footer-col h4 */
+.footer-col h4 {
+  color: white;
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  border: none;
+  padding: 0;
+}
+
+/* 97. .footer-col a */
+.footer-col a {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #64748b;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* 98. .footer-col a:hover */
+.footer-col a:hover {
+  color: var(--accent);
+  transform: translateX(4px);
+  text-shadow: none;
+}
+
+/* 99. .footer-bottom */
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--glass-border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+/* CTA SECTION */
+/* 100. .cta-section */
+.cta-section {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 101. .cta-section::before */
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(229,184,59,0.1) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* RESPONSIVE */
+/* 102. max-width 1024px */
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero {
+    padding: 4rem 1.5rem 5rem;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+  .trust-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 103. max-width 768px */
+@media (max-width: 768px) {
+  .desktop-auth {
+    display: none;
+  }
+  .mobile-auth {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid rgba(229,184,59,0.3);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    gap: 10px;
+  }
+  .mobile-auth .btn-auth {
+    text-align: center;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(26,27,31,0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .main-nav.active {
+    display: flex;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .grid, .grid-2, .grid-3, .split-content {
+    grid-template-columns: 1fr;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero {
+    padding: 3rem 1rem 4rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+  .trust-bar {
+    grid-template-columns: 1fr;
+  }
+  .glass-panel {
+    padding: 1.5rem;
+  }
+  .content-section {
+    padding: 3rem 1rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 104. max-width 480px */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .btn {
+    font-size: 0.95rem;
+  }
+}
