@@ -1000,3 +1000,35 @@ p {
     font-size: 0.95rem;
   }
 }
+
+/* Floating Social Buttons */
+.floating-social-container {
+    position: fixed;
+    bottom: 25px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+.float-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.float-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+.fb-float {
+    background: #1877F2;
+    box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
+}
+.tg-float {
+    background: #229ED9;
+    box-shadow: 0 4px 15px rgba(34, 158, 217, 0.4);
+}
